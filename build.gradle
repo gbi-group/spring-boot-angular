@@ -1,0 +1,46 @@
+apply from: 'libraries.gradle'
+
+buildscript {
+    repositories {
+        //mavenCentral()
+        jcenter()
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+    }
+}
+
+allprojects {
+    apply plugin: "java"
+
+    version = '1.0-SNAPSHOT'
+    group = "io.github.gbi"
+
+    repositories {
+        //mavenCentral()
+        jcenter()
+        mavenLocal()
+    }
+
+    dependencies {
+        compile libraries.springBootTest 
+        compile libraries.guava 
+        compile libraries.h2
+
+        testCompile libraries.junit
+        testCompile libraries.assertjCore
+        testCompile "org.mockito:mockito-all:1.10.19"
+    }
+}
+
+project(":show") {
+    apply plugin: "spring-boot"
+
+    dependencies {
+        compile libraries.springBootWeb
+        compile libraries.springBootJetty
+        compile libraries.springBootJpa
+    }
+}
