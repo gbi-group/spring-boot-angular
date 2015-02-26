@@ -1,10 +1,9 @@
 package io.github.gbi.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Message implements Serializable {
@@ -17,6 +16,9 @@ public class Message implements Serializable {
 
     @Column(nullable = false)
     private String body;
+
+    @OneToMany(mappedBy="message", fetch=FetchType.EAGER, cascade=CascadeType.MERGE, orphanRemoval=true)
+    private List<MessageDetail> detailList = new ArrayList<>();
 
     protected Message() {
 
@@ -37,5 +39,9 @@ public class Message implements Serializable {
 
     public String getBody() {
         return body;
+    }
+
+    public List<MessageDetail> getDetailList() {
+        return detailList;
     }
 }

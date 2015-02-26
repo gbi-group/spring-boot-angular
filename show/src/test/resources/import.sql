@@ -1,9 +1,12 @@
 insert into message(id, header, body) values (0, 'Header1', 'Hello!');
+insert into message_detail(id, msg_id, content) values(0, 0, 'Header1-Detail1');
+insert into message_detail(id, msg_id, content) values(1, 0, 'Header1-Detail2');
 insert into message(id, header, body) values (1, 'Header2', 'Good bye!');
 insert into message(id, header, body) values (2, 'Header3', 'This is test');
 insert into message(id, header, body) values (3, 'Header4', 'Hmm?');
 insert into message(id, header, body) values (4, 'Header5', 'Trolololo.');
 insert into message(id, header, body) values (5, 'Header6', 'Witam.');
+insert into message_detail(id, msg_id, content) values(2, 5, 'Header6-Detail1');
 insert into message(id, header, body) values (6, 'Header7', 'czy nosorożce mają uczucia?');
 insert into message(id, header, body) values (7, 'Header8', 'doh.');
 insert into message(id, header, body) values (8, 'Header9', 'blah blah.');
