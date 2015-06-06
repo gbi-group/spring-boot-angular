@@ -11,8 +11,8 @@ ext {
     commonsCollectionsVer = '3.2.1'
 
     hadoopVer = '2.6.0'
-    sparkVer = '1.2.1'
-    hiveVer = '1.0.0'
+    sparkVer = '1.3.1'
+    hiveVer = '1.2.0'
 
     hamcrestVer = '1.3'
     junitVer = '4.12'
@@ -24,8 +24,8 @@ ext {
     slf4jVer = '1.7.10'
     jbossLoggingVer = '3.1.4.GA'
 
-    scala11Ver = '2.11.4'
-    scala10Ver = '2.10.4'
+    scala11Ver = '2.11.6'
+    scala10Ver = '2.10.5'
     groovyVer = '2.4.1'
 
     mysqlConnectorJavaVer = '5.1.34'
@@ -62,8 +62,8 @@ ext {
     htmlunitVer = '2.15'
     nutzVer = '1.b.52'
 
-    springDataVer = '2.1.0.RELEASE'
-    springBootVer = '1.2.1.RELEASE'
+    springDataVer = '1.7.2.RELEASE'
+    springBootVer = '1.2.4.RELEASE'
     springVer = '4.1.5.RELEASE'
 
     hibernateVer = '4.2.14.Final'
@@ -176,6 +176,9 @@ ext {
         },
         springBootTest: "org.springframework.boot:spring-boot-starter-test:${springBootVer}",
         springBootJetty: "org.springframework.boot:spring-boot-starter-jetty:${springBootVer}",
+        springBootSecurity: "org.springframework.boot:spring-boot-starter-security:${springBootVer}",
+        springBootThymeleaf: "org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVer}",
+        springBootActuator: "org.springframework.boot:spring-boot-starter-actuator:${springBootVer}",
         springOrm: "org.springframework:spring-orm:${springVer}@jar",
         springContext: "org.springframework:spring-context:${springVer}@jar",
         springAop: "org.springframework:spring-aop:${springVer}@jar",

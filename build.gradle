@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.4.RELEASE")
     }
 }
 
@@ -42,5 +42,8 @@ project(":show") {
         compile libraries.springBootWeb
         compile libraries.springBootJetty
         compile libraries.springBootJpa
+        compile libraries.springBootSecurity
+        compile libraries.springBootThymeleaf
+        compile libraries.springBootActuator
     }
 }
